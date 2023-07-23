@@ -1,0 +1,110 @@
+$bgcolor: #000;
+$textcolor: #eee;
+$modalcolor: #ddd;
+$depth: 50vh;
+
+body {
+	background: $bgcolor;
+	margin: 0;
+	font-family: system-ui;
+	color: $textcolor;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	margin: 0 auto;
+	transform-style: preserve-3d;
+	width: 100%;
+	perspective: 100px;
+	perspective-origin: 20% 10%;
+}
+
+.bg {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.secciones {
+	transform-style: preserve-3d;
+	width: 100%;
+	transform: translateZ(50vh);
+}
+
+main {
+	z-index: 1;
+	margin: 0 auto;
+	width: 100%;
+}
+
+section {
+	// background-color: rgba($textcolor, 0.2);
+	width: 100%;
+	height: 100vh;
+	//aspect-ratio: 3 / 2;
+	display: grid;
+	place-items: center;
+	font-size: 4rem;
+	// outline: 1px dashed red;
+}
+
+svg {
+	height: 100%;
+	width: 100%;
+	path {
+		fill: none;
+	}
+}
+
+article {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	.content {
+		max-width: 70%;
+		background-color: $modalcolor;
+		color: $bgcolor;
+		padding: 1rem;
+		border-radius: 1rem;
+	}
+}
+
+.pliegue {
+	position: relative;
+	transform-style: preserve-3d;
+}
+
+.horizontal {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform-origin: bottom;
+	transform: rotateX(90deg);
+}
+
+.far {
+	transform: translateZ(-50vh);
+}
+
+.close {
+	// transform-origin: top;
+	// transform: translate3d(0, -50vh, 0);
+	// transform-style: preserve-3d;
+}
+
+section.mid-section {
+	// background-color: rgba($textcolor, 0.3);
+	width: 100%;
+	height: 50vh;
+	display: grid;
+	place-items: center;
+	font-size: 4rem;
+}
+
+section.resto {
+	height: 300vh;
+}
