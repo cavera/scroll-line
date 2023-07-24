@@ -5,11 +5,12 @@ gsap.registerPlugin(ScrollTrigger)
 import '../styles/styles.scss'
 
 function setPathLength(pathId: string) {
-	const path: SVGGeometryElement = document.getElementById(pathId)
-	const length = path.getTotalLength().toString()
-	path.style.strokeDasharray = length
-	path.style.strokeDashoffset = length
-	console.log(path.style.strokeDashoffset)
+	const path = document.getElementById(pathId)
+	if (path instanceof SVGGeometryElement) {
+		const length = path.getTotalLength().toString()
+		path.style.strokeDasharray = length
+		path.style.strokeDashoffset = length
+	}
 }
 
 setPathLength('linea1')
