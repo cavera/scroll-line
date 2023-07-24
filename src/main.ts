@@ -36,22 +36,23 @@ tl.to(
 	},
 	0
 )
+	.add('zoomout')
 	.to(
 		'.secciones',
 		{
 			z: 0,
-			duration: 5,
+			duration: 1,
 		},
-		1
+		'zoomout'
 	)
 	.from(
-		'.content',
+		'.about',
 		{
 			scale: 1.2,
 			autoAlpha: 0,
-			duration: 5,
+			duration: 1,
 		},
-		1
+		'zoomout'
 	)
 	.to(
 		'#linea2',
@@ -61,23 +62,24 @@ tl.to(
 				strokeDashoffset: 0,
 			},
 		},
-		2
+		'zoomout'
 	)
+	.add('scroll')
 	.to(
 		'#linea3',
 		{
-			duration: 5,
+			duration: 10,
 			css: {
 				strokeDashoffset: 0,
 			},
 		},
-		3
+		'scroll'
 	)
 	.to(
 		'.secciones',
 		{
-			y: '-=300vh',
+			y: '-=550vh',
 			duration: 10,
 		},
-		3
+		'scroll'
 	)

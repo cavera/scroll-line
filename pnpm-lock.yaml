@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   gsap:
-    specifier: file:../../Downloads/gsap-member/npm-install-this/gsap-bonus.tgz
+    specifier: file:gsap-bonus.tgz
     version: file:../../Downloads/gsap-member/npm-install-this/gsap-bonus.tgz
 
 devDependencies:
